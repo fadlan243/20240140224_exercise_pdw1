@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jelajahi Keindahan Alam: Gunung & Pantai</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Pesona Alam</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#gunung">Gunung</a></li>
+                    <li><a href="#pantai">Pantai</a></li>
+                    <li><a href="#" id="contact-link">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Temukan Petualanganmu di Alam Bebas</h1>
+            <p>Dari puncak tertinggi hingga kedalaman lautan, bumi menawarkan keindahan yang tak terbatas. Pilih petualanganmu hari ini dan rasakan keajaiban dunia.</p>
+            <button class="btn-hero" id="hero-btn">Mulai Jelajah</button>
+        </div>
+    </section>
+
+    <section id="gunung" class="content-section">
+        <div class="container grid">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000" alt="Pemandangan Gunung">
+            </div>
+            <div class="text-box">
+                <h2>Keagungan Puncak Gunung</h2>
+                <p>Rasakan kepuasan menaklukkan puncak tertinggi. Udara yang sejuk, pemandangan awan di bawah kaki, dan ketenangan alam akan menyegarkan jiwa dan raga Anda. Tantang dirimu dan temukan kedamaian di ketinggian.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantai" class="content-section pantai-bg">
+        <div class="container grid grid-reverse">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000" alt="Pemandangan Pantai">
+            </div>
+            <div class="text-box">
+                <h2>Ketenangan Pesisir Pantai</h2>
+                <p>Biarkan deburan ombak menghapus lelahmu. Pasir putih yang lembut, matahari terbenam yang memukau, dan birunya air laut memberikan ketenangan sejati. Tempat sempurna untuk bersantai dan menikmati hidup.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Pesona Alam Nusantara. Dibuat dengan Kreativitas.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mengambil elemen tombol kontak dan tombol hero
+        const contactLink = document.getElementById('contact-link');
+        const heroBtn = document.getElementById('hero-btn');
+
+        // Req 8: Menambahkan event listener untuk menampilkan alert
+        // Fungsi alert akan berjalan ketika 'Kontak' di klik
+        contactLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah link melakukan navigasi default
+            alert('Fitur kontak belum tersedia. Ini adalah contoh fungsi alert untuk requirement tugas!');
+        });
+
+        // Contoh alert lain pada tombol utama
+        heroBtn.addEventListener('click', function() {
+            alert('Selamat! Anda siap memulai petualangan. Silakan scroll ke bawah!');
+        });
+    </script>
+
+</body>
+</html>

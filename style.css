@@ -1,0 +1,211 @@
+/* --- Reset CSS Dasar untuk Konsistensi --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font modern */
+}
+
+/* --- Variabel Warna (Modern & Menarik) --- */
+:root {
+    --primary-color: #2c3e50;    /* Biru gelap maskulin (Gunung) */
+    --accent-color: #27ae60;     /* Hijau alam */
+    --pantai-color: #2980b9;     /* Biru laut */
+    --text-light: #ecf0f1;       /* Teks terang */
+    --text-dark: #333;           /* Teks gelap */
+    --bg-light: #fff;            /* Latar belakang putih */
+    --bg-alt: #f4f7f6;           /* Latar belakang alternatif abu muda */
+}
+
+/* --- Styling Global --- */
+html {
+    scroll-behavior: smooth; /* Efek scroll halus */
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Req 6: Styling Heading H2 --- */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* --- Req 4: Styling Paragraf --- */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* --- Styling Header & Navigasi --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    position: fixed; /* Header tetap di atas */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color); /* Efek hover hijau */
+}
+
+/* --- Styling Section Hero (Beranda) --- */
+.hero {
+    height: 100vh; /* Tinggi satu layar penuh */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('images/gunung.jpg') no-repeat center center/cover; /* Background image dengan overlay gelap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding-top: 80px; /* Kompensasi untuk fixed header */
+}
+
+/* --- Req 5: Styling Heading H1 --- */
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+/* --- Req 7: Styling Button --- */
+.btn-hero {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 50px; /* Tombol bulat modern */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-hero:hover {
+    background-color: #2ecc71; /* Warna hijau lebih terang saat hover */
+    transform: translateY(-3px); /* Efek terangkat */
+}
+
+/* --- Styling Seksi Konten Umum (Grid) --- */
+.content-section {
+    padding: 100px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom sama besar */
+    gap: 50px;
+    align-items: center;
+}
+
+.grid-reverse {
+    direction: rtl; /* Membalik urutan gambar dan teks (untuk variasi) */
+}
+
+.grid-reverse .text-box {
+    direction: ltr; /* Mengembalikan arah teks agar normal */
+}
+
+/* --- Req 3: Styling Gambar --- */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Sudut gambar melengkung modern */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Bayangan halus */
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.03); /* Efek zoom sedikit saat hover */
+}
+
+/* --- Styling Variasi Seksi Pantai --- */
+.pantai-bg {
+    background-color: var(--bg-alt);
+}
+
+.pantai-bg h2 {
+    color: var(--pantai-color);
+}
+
+/* --- Styling Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #bbb;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design (Layar Handphone) --- */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom pada layar kecil */
+        text-align: center;
+    }
+
+    .grid-reverse {
+        direction: ltr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+}
